@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const path = require("path");
+const sh = require("shelljs");
 
 let mainConfig = {
     mode: "development",
@@ -97,6 +98,13 @@ let rendererConfig = {
                 },
             },
             {
+                test: /\.mp3$/,
+                loader: "file-loader",
+                options: {
+                    name: "[path][name].[ext]",
+                },
+            },
+            {
                 test: /\.(eot|ttf|woff|woff2)$/,
                 loader: "file-loader",
                 options: {
@@ -109,6 +117,15 @@ let rendererConfig = {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "./public/index.html"),
         }),
+        function() {
+            this.plugin("done", () => {
+                sh.cp(
+                    "-rf",
+                    `${__dirname}/public/AudioFiles`,
+                    `${__dirname}/dist/`
+                );
+            });
+        },
     ],
 };
 

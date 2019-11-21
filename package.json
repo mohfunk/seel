@@ -1,6 +1,6 @@
 {
     "name": "seel",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "beautiful things",
     "main": "./dist/main.bundle.js",
     "repository": "https://github.com/mohfunk/seel.git",
@@ -8,9 +8,11 @@
     "license": "MIT",
     "scripts": {
         "dev": "rimraf dist && webpack --watch --config ./webpack.dev.js --progress --colors",
-        "pro": "rimraf dist && webpack --config ./webpack.prod.js --progress --colors"
+        "pro": "rimraf dist && webpack --config ./webpack.prod.js --progress --colors",
+        "serve": "browser-sync ./dist/"
     },
     "devDependencies": {
+        "@types/lodash": "^4.14.149",
         "@types/p5": "^0.9.0",
         "browser-sync": "^2.26.7",
         "concurrently": "^5.0.0",
@@ -29,7 +31,9 @@
         "webpack-cli": "^3.3.10"
     },
     "dependencies": {
-        "p5": "^0.10.2"
+        "lodash": "^4.17.15",
+        "p5": "^0.10.2",
+        "shelljs": "^0.8.3"
     },
     "prettier": {
         "singleQuote": false,
