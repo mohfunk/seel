@@ -18,8 +18,7 @@ let mainConfig = {
         extensions: [".js", ".json", ".ts"],
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
                 test: /\.(ts)$/,
                 exclude: /node_modules/,
@@ -73,8 +72,7 @@ let rendererConfig = {
         port: 9000,
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 // All files with a '.ts' or '.tsx' extension will be handled by 'ts-loader'.
                 test: /\.(ts|tsx)$/,
                 exclude: /node_modules/,
@@ -117,13 +115,18 @@ let rendererConfig = {
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, "./public/index.html"),
         }),
-        function() {
+        function () {
             this.plugin("done", () => {
                 sh.cp(
                     "-rf",
                     `${__dirname}/public/AudioFiles`,
                     `${__dirname}/dist/`
                 );
+                sh.cp(
+                    "-rf",
+                    `${__dirname}/public/assets`,
+                    `${__dirname}/dist/`
+                )
             });
         },
     ],

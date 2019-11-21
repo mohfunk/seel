@@ -1,6 +1,6 @@
 {
     "name": "seel",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "beautiful things",
     "main": "./dist/main.bundle.js",
     "repository": "https://github.com/mohfunk/seel.git",
