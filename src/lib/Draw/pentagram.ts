@@ -1,6 +1,6 @@
 import Point from "./point";
 const step: number = (2 * Math.PI) / 5;
-import {gp as p} from "../sketch";
+import {gp as p} from "../../skt/sketch";
 
 export default class Pentagram {
     center: Point;

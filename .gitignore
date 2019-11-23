@@ -53,3 +53,6 @@ dist/
 .serverless/
 .fusebox/
 .dynamodb/
+public/assets/fonts
+public/assets/base.min.css
+public/AudioFiles

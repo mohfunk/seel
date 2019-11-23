@@ -1,6 +1,6 @@
 import p5 from "p5";
-import Playback from "./Audio/Playback";
-import Pentagram from "./Draw/pentagram";
+import Playback from "../lib/Audio/Playback";
+import Pentagram from "../lib/Draw/pentagram";
 export let gp: p5;
 const skt = (p: p5) => {
     gp = p;

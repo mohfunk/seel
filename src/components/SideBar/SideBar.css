@@ -1,0 +1,103 @@
+#sideBar {
+    background: transparent;
+}
+
+#sideHead {
+    font-family: "Brandon-Text";
+    text-align: center;
+    margin-top: 2em;
+    margin-left: 30%;
+
+}
+
+
+h1 {
+
+    font-size: 22px;
+    font-weight: 500;
+    color: hsla(99, 100%, 100%, 1.00)
+}
+
+h1>#dot {
+    font-weight: 700;
+    margin: 0.1em;
+    color: hsla(213, 100%, 51%, 1.00);
+}
+
+h1>#moh {
+    font-weight: 400;
+    color: rgb(152, 152, 152)
+}
+
+#sideCont {
+    font-family: "Brandon-Text";
+    text-align: center;
+    margin-top: 1em;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#links>.lnk {
+    margin: 0 0.5em 0 0.5em;
+}
+
+#links {
+    font-family: "Brandon-Text";
+    text-align: center;
+    margin-top: 1em;
+    margin-left: 30%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+
+#sideFoot {
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+
+#links>.lnk>a {
+
+    text-decoration: none;
+    color: rgb(152, 152, 152);
+    -webkit-transition: color 0.15s ease-in-out;
+    transition: color 0.15s ease-in-out;
+}
+
+#links>.lnk>a.is-active {
+    text-decoration: none;
+    font-weight: bold;
+    color: hsla(99, 100%, 100%, 1.00)
+}
+
+#links>.lnk>a:hover {
+    text-decoration: none;
+    color: hsla(213, 71%, 51%, 1.00) !important;
+}
+
+#links>.lnk>a:visited {
+    text-decoration: none;
+    color: none;
+}
+
+#cpr {
+    margin-left: 30%;
+}
+
+h6 {
+    text-align: center;
+    margin-top: 1em;
+    color: rgb(152, 152, 152);
+    font-size: 12px;
+}
+
+svg {
+    width: 16px;
+    height: 16px;
+}

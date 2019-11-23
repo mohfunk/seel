@@ -1,7 +1,7 @@
 import p5 from "p5";
 import "p5/lib/addons/p5.sound";
-import {files} from "../Assets/path.json";
-import {gp as p} from "../sketch";
+import {files} from "../../Assets/path.json";
+import {gp as p} from "../../skt/sketch";
 
 /**
  * soundtrack file path

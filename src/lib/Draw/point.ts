@@ -1,4 +1,4 @@
-import {gp as p} from "../sketch";
+import {gp as p} from "../../skt/sketch";
 
 export default class Point {
     public x: number;
